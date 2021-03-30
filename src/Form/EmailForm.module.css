@@ -1,0 +1,138 @@
+.Form {
+  display: flex;
+  flex-direction: row;
+  caret-color: white;
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.Inputs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: slategrey;
+}
+
+input,
+textarea {
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.Inputs input {
+  font-size: 1.2rem;
+  margin: 5px;
+  height: 30px;
+  width: 350px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid slategray;
+}
+
+.Inputs textarea {
+  display: inline-block;
+  min-height: 100px;
+  min-height: 150px;
+  width: 350px;
+  resize: vertical;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 1);
+  border-bottom: 1px solid slategray;
+}
+
+.Name {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  transition: all 0.5s ease;
+}
+.Name .NameLabel {
+  font-size: 1.2rem;
+  transition: all 0.5s ease;
+  margin-bottom: -30px;
+}
+.NameInput:focus {
+  margin-top: 30px;
+  outline: none;
+  transition: all 0.5s ease;
+  border-bottom: 1px solid whitesmoke;
+}
+
+input:focus + label,
+textarea:focus + label {
+  color: whitesmoke;
+  transform: scale(0.9);
+}
+
+input:valid + label,
+textarea:valid + label {
+  transform: scale(0.9);
+  color: whitesmoke;
+}
+
+.NameInput:valid {
+  outline: none;
+  margin-top: 30px;
+  border-bottom: 1px solid green;
+  transition: all 0.5s ease;
+}
+
+.NameInput:focus:valid {
+  border-bottom: 1px solid green;
+  transition: all 0.5s ease;
+}
+
+.NameInput:invalid {
+  outline: none;
+  transition: all 0.5s ease;
+}
+
+input:not(:placeholder-shown) {
+  margin-top: 30px;
+}
+
+.NameInput:focus:invalid {
+  /* border-bottom: 1px solid slategray; */
+  transition: all 0.5s ease;
+}
+
+input:required:invalid,
+textarea:required:invalid,
+input:focus:invalid {
+  /* insert your own styles for invalid form input */
+  box-shadow: none;
+}
+
+.Button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.Button input {
+  width: 100px;
+  height: 30px;
+  font-size: 1.1rem;
+  background-color: transparent;
+  color: whitesmoke;
+  font-weight: 900;
+  box-shadow: none;
+  border: none;
+  transition: all 0.5s ease;
+  background-color: slategray;
+}
+
+.Button input:hover {
+  cursor: pointer;
+  color: black;
+  background-color: whitesmoke;
+  transition: all 0.5s ease;
+}
